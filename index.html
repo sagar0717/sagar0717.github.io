@@ -1,19 +1,181 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Form Styling</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        /* 
+        -May want to add "border-box for "box-sizing so padding does not affect width
+        -Reset margin and padding 
+       */
+      }
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=10" />
-    <title>Book with Stylesheet</title>
-    <link href="file.css" rel="stylesheet"> </head>
-<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+      body {
+        background: #344a72;
+        font-family: "Raleway", sans-serif;
+        line-height: 1.8em;
 
-<body>
-    <h1>ACKNOWLEDGEMENT</h1>
-    <div class="clearfix"> <img src="img/think.jpeg" alt "Stylesheet Book">
-        <p>From our past experience, the data provided by logs created with other applications (installed on the device) does not provide accurate and full device and app information.</p>
-        <p>Firstly, you will need to install Android Studio for Windows (note you will need approximately 1.5gb free space on your computer) <a href="#">read more....</a> </p>
+        /* 
+          -Background color is #344a72
+        */
+      }
+
+      a {
+        text-decoration: none;
+        /* 
+        Underlined links are ugly :)
+       */
+      }
+
+      #container {
+        max-width: 400px;
+        margin: 40px auto;
+        padding: 20px;
+        /* 
+        -Remember, margin: auto on left and right will center a block element 
+        -I would also set a "max-width" for responsiveness
+        -May want to add some padding
+        */
+      }
+
+      .form-wrap {
+        background: #fff;
+        padding: 15px 25px;
+
+        /* 
+          This is the white area around the form and heading, etc
+        */
+      }
+
+      .form-wrap h1,
+      .form-wrap p {
+        text-align: center;
+        /* padding-bottom: 10px; */
+        /* 
+          May want to center these
+        */
+      }
+
+      .form-wrap .form-group {
+        margin-top: 10px;
+        /* 
+          Each label, input is wrapped in .form-group
+        */
+      }
+
+      .form-wrap .form-group label {
+        display: block;
+        /* 
+          Label should be turned into a block element
+        */
+      }
+
+      .form-wrap .form-group input {
+        width: 100%;
+        padding: 10px;
+        border: #ddd 1px solid;
+        border-radius: 5px;
+        /* 
+          Inputs should reach accross the .form-wrap 100% and have some padding
+        */
+      }
+
+      .form-wrap button {
+        width: 100%;
+        padding: 10px;
+        display: block;
+        background: #49c1a2;
+        border: none;
+        margin-top: 15px;
+        border-radius: 5px;
+        color: #fff;
+        cursor: pointer;
+        /* 
+          Button should wrap accross 100% and display as block
+          Background color for button is #49c1a2
+        */
+      }
+
+      .form-wrap button:hover {
+        background: #37a08e;
+        /* 
+          Hover background color for button is #37a08e
+        */
+      }
+
+      .form-wrap .bottom-text {
+        font-size: 12px;
+        margin-top: 20px;
+        /* 
+          Bottom text is smaller
+        */
+      }
+
+      footer {
+        text-align: center;
+        font-size: 14px;
+        color: #fff;
+        margin-top: 10px;
+        /* 
+        Should be centered
+       */
+      }
+
+      footer a {
+        color: #49c1a2;
+        /* 
+          Footer link color is #49c1a2
+        */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div class="form-wrap">
+        <h1>Sign Up</h1>
+        <p>It's free and only takes a minute</p>
+        <form>
+          <div class="form-group">
+            <label for="first-name">First Name</label>
+            <input type="text" name="firstName" id="first-name" />
+          </div>
+          <div class="form-group">
+            <label for="last-name">Last Name</label>
+            <input type="text" name="lastName" id="last-name" />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" />
+          </div>
+          <div class="form-group">
+            <label for="password2">Confirm Password</label>
+            <input type="password" name="pasword2" id="password2" />
+          </div>
+          <button type="submit" class="btn">Sign Up</button>
+          <p class="bottom-text">
+            By clicking the Sign Up button, you agree to our
+            <a href="#">Terms & Conditions</a> and
+            <a href="#">Privacy Policy</a>
+          </p>
+        </form>
+      </div>
+      <footer>
+        <p>Already have an account? <a href="#">Login Here</a></p>
+      </footer>
     </div>
-</body>
-
+  </body>
 </html>
